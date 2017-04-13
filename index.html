@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Interest Calculator</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="heading">
+            <h1>Interest Calculator</h1>
+            <button id="simple">Simple interest</button>
+            <button id="compound">Compound interest</button>
+        </div>
+        <form  method="post" class="calculator hidden">
+          <div class="fillin">
+              <label>Principal:</label>
+              <input type="text" name="principal" id="principal">
+              <label>Rate of interest:</label>
+              <input type="text" name="roi" id="roi">
+              <label>Time Period:</label>
+              <input type="text" name="time" id="time">
+              <div id="f" class="freq">
+                <label>Compound frequency:</label>
+                  Yearly        <input type="radio" name="freq" value="yearly">
+                  Half-yearly   <input type="radio" name="freq" value ="half-yearly">
+                  Quarterly     <input type="radio" name="freq" value="quarterly">
+                  Monthly       <input type="radio" name="freq" value="monthly">
+              </div>
+          </div>
+          <button onclick="calculate()" type="button">Calculate</button>
+      </form>
+      <div class="data hidden">
+          <label>Total amount:</label> <span id="total"> </span>
+          <label>Total interest:</label> <span id="totalint"> </span>
+      </div>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
